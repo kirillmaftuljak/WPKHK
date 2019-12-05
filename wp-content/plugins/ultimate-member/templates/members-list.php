@@ -1,7 +1,8 @@
-<?php if ( ! defined( 'ABSPATH' ) ) exit; ?>
+<?php if ( ! defined( 'ABSPATH' ) ) exit;
 
+$unique_hash = substr( md5( $args['form_id'] ), 10, 5 ); ?>
 
-<script type="text/template" id="tmpl-um-member-list">
+<script type="text/template" id="tmpl-um-member-list-<?php echo esc_attr( $unique_hash ) ?>">
 	<div class="um-members um-members-list">
 
 		<# if ( data.length > 0 ) { #>
@@ -72,14 +73,14 @@
 
 									if ( $show_social ) { ?>
 										<# if ( ! $show_block ) { #>
-										<# $show_block = user.social_urls #>
+											<# $show_block = user.social_urls #>
 										<# } #>
 									<?php } ?>
 
 									<# if ( $show_block ) { #>
-										<div class="um-member-meta-main">
+										<div class="um-member-meta-main<?php if ( ! $userinfo_animate ) { echo ' no-animate'; } ?>">
 
-											<div class="um-member-meta <?php if ( ! $userinfo_animate ) { echo 'no-animate'; } ?>">
+											<div class="um-member-meta">
 												<?php foreach ( $reveal_fields as $key ) { ?>
 
 													<# if ( typeof user['<?php echo $key; ?>'] !== 'undefined' ) { #>
@@ -116,24 +117,22 @@
 
 						</div>
 					</div>
-					<div class="um-member-card-footer">
+					<div class="um-member-card-footer <?php echo ! $profile_photo ? 'no-photo' : '' ?> <?php if ( $show_userinfo && $userinfo_animate ) { ?><# if ( ! $show_block ) { #>no-reveal<# } #><?php } ?>">
 
 						<div class="um-member-card-footer-buttons">
 							<?php do_action( 'um_members_list_just_after_actions_tmpl', $args ); ?>
 						</div>
 
-						<?php if ( $show_userinfo ) { ?>
+						<?php if ( $show_userinfo && $userinfo_animate ) { ?>
 							<# if ( $show_block ) { #>
-								<?php if ( $userinfo_animate ) { ?>
-									<div class="um-member-card-reveal-buttons">
-										<div class="um-member-more">
-											<a href="javascript:void(0);"><i class="um-faicon-angle-down"></i></a>
-										</div>
-										<div class="um-member-less">
-											<a href="javascript:void(0);"><i class="um-faicon-angle-up"></i></a>
-										</div>
+								<div class="um-member-card-reveal-buttons">
+									<div class="um-member-more">
+										<a href="javascript:void(0);"><i class="um-faicon-angle-down"></i></a>
 									</div>
-								<?php } ?>
+									<div class="um-member-less">
+										<a href="javascript:void(0);"><i class="um-faicon-angle-up"></i></a>
+									</div>
+								</div>
 							<# } #>
 						<?php } ?>
 					</div>

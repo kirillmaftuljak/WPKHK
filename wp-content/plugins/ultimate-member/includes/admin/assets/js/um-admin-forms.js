@@ -1,4 +1,16 @@
 jQuery(document).ready( function() {
+
+
+	/**
+	 * Multi-selects sort
+	 */
+	jQuery('.um-multi-selects-list.um-sortable-multi-selects').sortable({
+		items:                  '.um-admin-drag-fld',
+		connectWith:            '.um-admin-drag-col,.um-admin-drag-group',
+		forcePlaceholderSize:   true
+	});
+
+
 	/**
 	 * Multi-selects field
 	 */
@@ -16,6 +28,8 @@ jQuery(document).ready( function() {
 	jQuery( '.um-multi-selects-add-option' ).click( function() {
 		var list = jQuery(this).siblings('ul.um-multi-selects-list');
 
+		var sortable = list.hasClass( 'um-sortable-multi-selects' );
+
 		var field_id = list.data('field_id');
 		var k = 0;
 		if ( list.find( 'li:last select.um-forms-field' ).length > 0 ) {
@@ -25,14 +39,20 @@ jQuery(document).ready( function() {
 
 		var selector_html = jQuery( '<div>' ).append( list.siblings('.um-hidden-multi-selects').clone() ).html();
 
-		list.append(
-			'<li class="um-multi-selects-option-line"><span class="um-field-wrapper">' + selector_html +
-			'</span><span class="um-field-control"><a href="javascript:void(0);" class="um-select-delete">' + php_data.texts.remove + '</a></span></li>'
-		);
+		var html = '<li class="um-multi-selects-option-line' + ( sortable ? ' um-admin-drag-fld' : '' ) + '">';
+		if ( sortable ) {
+			html += '<span class="um-field-icon"><i class="um-faicon-sort"></i></span>';
+		}
+
+		html += '<span class="um-field-wrapper">' + selector_html + '</span>' +
+			'<span class="um-field-control">' +
+				'<a href="javascript:void(0);" class="um-select-delete">' + wp.i18n.__( 'Remove', 'ultimate-member' ) + '</a>' +
+			'</span>' +
+		'</li>';
+		list.append( html );
 
 		list.find('li:last .um-hidden-multi-selects').attr('name', jQuery(this).data('name') ).
 		addClass('um-forms-field um-long-field').removeClass('um-hidden-multi-selects').attr('id', list.data('id_attr') + '-' + k);
-
 	});
 
 	var um_local_date = new Date();
@@ -284,7 +304,7 @@ jQuery(document).ready( function() {
 
 		list.append(
 			'<li class="um-md-default-filters-option-line"><span class="um-field-wrapper">' + selector_html +
-			'</span></span><span class="um-field-control"><a href="javascript:void(0);" class="um-select-delete">' + php_data.texts.remove + '</a></span><span class="um-field-wrapper2 um"></li>'
+			'</span></span><span class="um-field-control"><a href="javascript:void(0);" class="um-select-delete">' + wp.i18n.__( 'Remove', 'ultimate-member' ) + '</a></span><span class="um-field-wrapper2 um"></li>'
 		);
 
 		list.find('li:last .um-hidden-md-default-filters').attr('name', jQuery(this).data('name') ).
@@ -318,7 +338,7 @@ jQuery(document).ready( function() {
 
 		list.append(
 			'<li class="' + classes + '"><span class="um-field-wrapper">' + text_html +
-			'</span><span class="um-field-control"><a href="javascript:void(0);" class="um-text-delete">' + php_data.texts.remove + '</a></span></li>'
+			'</span><span class="um-field-control"><a href="javascript:void(0);" class="um-text-delete">' + wp.i18n.__( 'Remove', 'ultimate-member' ) + '</a></span></li>'
 		);
 
 		list.find('li:last .um-hidden-multi-text').attr('name', jQuery(this).data('name') ).
@@ -366,7 +386,7 @@ jQuery(document).ready( function() {
 			frame = wp.media({
 				title: button.data('upload_frame'),
 				button: {
-					text: php_data.texts.select
+					text: wp.i18n.__( 'Select', 'ultimate-member' )
 				},
 				multiple: false  // Set to true to allow multiple files to be selected
 			});

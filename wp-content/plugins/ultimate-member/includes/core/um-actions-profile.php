@@ -236,7 +236,29 @@ function um_user_edit_profile( $args ) {
 
 		foreach ( $fields as $key => $array ) {
 
-			if ( ! um_can_edit_field( $array ) && isset( $array['editable'] ) && ! $array['editable'] ) {
+			if ( ! isset( $array['type'] ) ) {
+				continue;
+			}
+
+			if ( isset( $array['edit_forbidden'] ) ) {
+				continue;
+			}
+
+			// required option? 'required_opt' - it's field attribute predefined in the field data in code
+			if ( isset( $array['required_opt'] ) ) {
+				$opt = $array['required_opt'];
+				if ( UM()->options()->get( $opt[0] ) != $opt[1] ) {
+					continue;
+				}
+			}
+
+			// fields that need to be disabled in edit mode (profile) (email, username, etc.)
+			$arr_restricted_fields = UM()->fields()->get_restricted_fields_for_edit( $user_id );
+			if ( in_array( $key, $arr_restricted_fields ) ) {
+				continue;
+			}
+
+			if ( ! um_can_edit_field( $array ) || ! um_can_view_field( $array ) ) {
 				continue;
 			}
 
@@ -292,7 +314,7 @@ function um_user_edit_profile( $args ) {
 
 				//update empty user meta
 				if ( ! isset( $args['submitted'][ $key ] ) || $args['submitted'][ $key ] == '' ) {
-					update_user_meta( um_user( 'ID' ), $key, '' );
+					update_user_meta( $user_id, $key, '' );
 				}
 			}
 
@@ -306,7 +328,7 @@ function um_user_edit_profile( $args ) {
 
 				// update empty user meta
 				if ( ! isset( $args['submitted'][ $key ] ) || $args['submitted'][ $key ] == '' ) {
-					update_user_meta( um_user( 'ID' ), $key, array() );
+					update_user_meta( $user_id, $key, array() );
 				}
 			}
 
@@ -314,10 +336,10 @@ function um_user_edit_profile( $args ) {
 
 				if ( isset( $array['type'] ) && in_array( $array['type'], array( 'image', 'file' ) ) ) {
 
-					if ( /*um_is_file_owner( UM()->uploader()->get_upload_base_url() . um_user( 'ID' ) . '/' . $args['submitted'][ $key ], um_user( 'ID' ) ) ||*/ um_is_temp_file( $args['submitted'][ $key ] ) || $args['submitted'][ $key ] == 'empty_file' ) {
+					if ( um_is_temp_file( $args['submitted'][ $key ] ) || $args['submitted'][ $key ] == 'empty_file' ) {
 						$files[ $key ] = $args['submitted'][ $key ];
-					} elseif( um_is_file_owner( UM()->uploader()->get_upload_base_url() . um_user( 'ID' ) . '/' . $args['submitted'][ $key ], um_user( 'ID' ) ) ) {
-						/*$files[ $key ] = 'empty_file';*/
+					} elseif( um_is_file_owner( UM()->uploader()->get_upload_base_url() . $user_id . '/' . $args['submitted'][ $key ], $user_id ) ) {
+
 					} else {
 						$files[ $key ] = 'empty_file';
 					}
@@ -356,7 +378,7 @@ function um_user_edit_profile( $args ) {
 			$to_update['role'] = $args['submitted']['role'];
 		}
 
-		$args['roles_before_upgrade'] = UM()->roles()->get_all_user_roles( um_user( 'ID' ) );
+		$args['roles_before_upgrade'] = UM()->roles()->get_all_user_roles( $user_id );
 	}
 
 	/**
@@ -366,19 +388,20 @@ function um_user_edit_profile( $args ) {
 	 * @title um_user_pre_updating_profile
 	 * @description Some actions before profile submit
 	 * @input_vars
-	 * [{"var":"$userinfo","type":"array","desc":"Submitted User Data"}]
+	 * [{"var":"$userinfo","type":"array","desc":"Submitted User Data"},
+	 * {"var":"$user_id","type":"int","desc":"User ID"}]
 	 * @change_log
 	 * ["Since: 2.0"]
-	 * @usage add_action( 'um_user_pre_updating_profile', 'function_name', 10, 1 );
+	 * @usage add_action( 'um_user_pre_updating_profile', 'function_name', 10, 2 );
 	 * @example
 	 * <?php
-	 * add_action( 'um_user_pre_updating_profile', 'my_user_pre_updating_profile', 10, 1 );
-	 * function my_user_pre_updating_profile( $userinfo ) {
+	 * add_action( 'um_user_pre_updating_profile', 'my_user_pre_updating_profile', 10, 2 );
+	 * function my_user_pre_updating_profile( $userinfo, $user_id ) {
 	 *     // your code here
 	 * }
 	 * ?>
 	 */
-	do_action( 'um_user_pre_updating_profile', $to_update );
+	do_action( 'um_user_pre_updating_profile', $to_update, $user_id );
 
 	/**
 	 * UM hook
@@ -387,21 +410,22 @@ function um_user_edit_profile( $args ) {
 	 * @title um_user_pre_updating_profile_array
 	 * @description Change submitted data before update profile
 	 * @input_vars
-	 * [{"var":"$to_update","type":"array","desc":"Profile data upgrade"}]
+	 * [{"var":"$to_update","type":"array","desc":"Profile data upgrade"},
+	 * {"var":"$user_id","type":"int","desc":"User ID"}]
 	 * @change_log
 	 * ["Since: 2.0"]
 	 * @usage
-	 * <?php add_filter( 'um_user_pre_updating_profile_array', 'function_name', 10, 1 ); ?>
+	 * <?php add_filter( 'um_user_pre_updating_profile_array', 'function_name', 10, 2 ); ?>
 	 * @example
 	 * <?php
-	 * add_filter( 'um_user_pre_updating_profile_array', 'my_user_pre_updating_profile', 10, 1 );
-	 * function my_user_pre_updating_profile( $to_update ) {
+	 * add_filter( 'um_user_pre_updating_profile_array', 'my_user_pre_updating_profile', 10, 2 );
+	 * function my_user_pre_updating_profile( $to_update, $user_id ) {
 	 *     // your code here
 	 *     return $to_update;
 	 * }
 	 * ?>
 	 */
-	$to_update = apply_filters( 'um_user_pre_updating_profile_array', $to_update );
+	$to_update = apply_filters( 'um_user_pre_updating_profile_array', $to_update, $user_id );
 
 
 	if ( is_array( $to_update ) ) {
@@ -427,7 +451,7 @@ function um_user_edit_profile( $args ) {
 		 * }
 		 * ?>
 		 */
-		do_action( 'um_after_user_updated', um_user( 'ID' ), $args, $to_update );
+		do_action( 'um_after_user_updated', $user_id, $args, $to_update );
 	}
 
 	/**
@@ -437,25 +461,26 @@ function um_user_edit_profile( $args ) {
 	 * @title um_user_pre_updating_files_array
 	 * @description Change submitted files before update profile
 	 * @input_vars
-	 * [{"var":"$files","type":"array","desc":"Profile data files"}]
+	 * [{"var":"$files","type":"array","desc":"Profile data files"},
+	 * {"var":"$user_id","type":"int","desc":"User ID"}]
 	 * @change_log
 	 * ["Since: 2.0"]
 	 * @usage
-	 * <?php add_filter( 'um_user_pre_updating_files_array', 'function_name', 10, 1 ); ?>
+	 * <?php add_filter( 'um_user_pre_updating_files_array', 'function_name', 10, 2 ); ?>
 	 * @example
 	 * <?php
-	 * add_filter( 'um_user_pre_updating_files_array', 'my_user_pre_updating_files', 10, 1 );
-	 * function my_user_pre_updating_files( $files ) {
+	 * add_filter( 'um_user_pre_updating_files_array', 'my_user_pre_updating_files', 10, 2 );
+	 * function my_user_pre_updating_files( $files, $user_id ) {
 	 *     // your code here
 	 *     return $files;
 	 * }
 	 * ?>
 	 */
-	$files = apply_filters( 'um_user_pre_updating_files_array', $files );
+	$files = apply_filters( 'um_user_pre_updating_files_array', $files, $user_id );
 
 	if ( ! empty( $files ) && is_array( $files ) ) {
 		UM()->uploader()->replace_upload_dir = true;
-		UM()->uploader()->move_temporary_files( um_user( 'ID' ), $files );
+		UM()->uploader()->move_temporary_files( $user_id, $files );
 		UM()->uploader()->replace_upload_dir = false;
 	}
 
@@ -501,11 +526,11 @@ function um_user_edit_profile( $args ) {
 	 * }
 	 * ?>
 	 */
-	do_action( 'um_update_profile_full_name', um_user( 'ID' ), $to_update );
+	do_action( 'um_update_profile_full_name', $user_id, $to_update );
 
 	if ( ! isset( $args['is_signup'] ) ) {
 
-		$url = um_user_profile_url( um_user( 'ID' ) );
+		$url = um_user_profile_url( $user_id );
 		exit( wp_redirect( um_edit_my_profile_cancel_uri( $url ) ) );
 	}
 }
@@ -1306,6 +1331,9 @@ function um_submit_form_profile( $args ) {
 	if ( isset( UM()->form()->errors ) ) {
 		return;
 	}
+
+	UM()->fields()->set_mode  = 'profile';
+	UM()->fields()->editing = true;
 
 	/**
 	 * UM hook

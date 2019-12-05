@@ -575,6 +575,7 @@ if ( ! class_exists( 'um\core\Account' ) ) {
 		function get_tab_fields( $id, $shortcode_args ) {
 			$output = null;
 
+			UM()->fields()->set_id = $id;
 			UM()->fields()->set_mode = 'account';
 			UM()->fields()->editing = true;
 
