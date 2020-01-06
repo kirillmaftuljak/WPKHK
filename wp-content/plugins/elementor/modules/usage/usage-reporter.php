@@ -51,12 +51,16 @@ class Usage_Reporter extends Base_Reporter {
 			}
 
 			$module->recalc_usage();
+
+			wp_safe_redirect( remove_query_arg( self::RECALC_ACTION ) );
+
+			die;
 		}
 
 		$usage = '';
 
 		foreach ( $module->get_formatted_usage() as $doc_type => $data ) {
-			$usage .= '<tr><td>' . $data['title'] . '</td><td>';
+			$usage .= '<tr><td>' . $data['title'] . ' ( ' . $data['count'] . ' )</td><td>';
 
 			foreach ( $data['elements'] as $element => $count ) {
 				$usage .= $element . ': ' . $count . PHP_EOL;
@@ -76,7 +80,7 @@ class Usage_Reporter extends Base_Reporter {
 		$usage = PHP_EOL;
 
 		foreach ( $module->get_formatted_usage( 'raw' ) as $doc_type => $data ) {
-			$usage .= "\t{$data['title']}" . PHP_EOL;
+			$usage .= "\t{$data['title']} : " . $data['count'] . PHP_EOL;
 
 			foreach ( $data['elements'] as $element => $count ) {
 				$usage .= "\t\t{$element} : {$count}" . PHP_EOL;
