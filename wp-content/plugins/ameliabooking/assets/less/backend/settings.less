@@ -1,0 +1,191 @@
+@import "../common/_variables";
+
+#am-settings {
+  .am-settings-cards {
+    padding-top: @padding-big*2;
+    padding-bottom: @padding-big*2;
+
+    .el-row {
+      display: flex;
+      @media @less-then-medium {
+        display: block;
+      }
+
+      .el-col {
+        border-right: 1px solid @color-divider-gray;
+        margin-bottom: @margin-big*2;
+        position: relative;
+
+        &:nth-child(3) {
+          border-right: none;
+        }
+
+        @media @less-then-medium {
+          border-right: none;
+        }
+      }
+
+      .am-settings-card {
+        position: relative;
+        height: 100%;
+        margin-bottom: @margin-small;
+        @media @less-then-medium {
+          height: auto;
+        }
+
+        h3 {
+          line-height: 1.4;
+          margin-top: 0;
+          margin-bottom: @margin-big;
+          font-size: @medium-fs;
+
+          img,
+          svg {
+            display: inline-block;
+            vertical-align: sub;
+            margin-right: @margin-small;
+            max-width: 24px;
+            max-height: 24px;
+          }
+        }
+
+        p {
+          font-size: @small-fs;
+          margin: @margin-medium 0;
+          min-height: 60px;
+
+          &.link {
+            min-height: 0;
+            color: @color-blue;
+            font-size: @mini-fs;
+            font-weight: @bold;
+            cursor: pointer;
+            text-transform: uppercase;
+            margin-bottom: 0;
+
+            &:hover {
+              color: fade(@color-blue, 75%);
+            }
+
+            @media @less-then-medium {
+              position: static;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .am-dialog-settings {
+    .am-dialog-scrollable {
+      .el-alert {
+        &.el-alert--warning {
+          color: @color-orange;
+          margin-bottom: @margin-medium;
+
+          .el-alert__title {
+            color: @color-orange;
+          }
+
+          .el-alert__content {
+            p {
+              font-size: 14px;
+              word-break: break-word;
+            }
+          }
+        }
+      }
+
+      .el-collapse {
+        .el-collapse-item__wrap {
+          margin: 0;
+
+          p {
+            font-size: @small-fs
+          }
+        }
+      }
+
+      .el-textarea {
+        margin-bottom: @margin-medium;
+      }
+    }
+
+    .am-google-calendar-tooltip {
+      margin: 0;
+    }
+
+    .am-google-calendar-button {
+      width: 46px;
+      height: 40px;
+      float: right;
+
+      svg {
+        path {
+          fill: @color-white !important;
+        }
+      }
+    }
+
+    .am-setting-box {
+      #am-woocommerce {
+        vertical-align: middle;
+        max-width: 100px;
+        max-height: 100px;
+      }
+    }
+
+    .am-setting-notifications-select {
+      .el-select__tags {
+        top: 50%;
+        overflow: visible;
+        white-space: normal;
+        flex-wrap: wrap;
+      }
+    }
+
+    .am-activation-alert {
+      margin-bottom: @margin-medium;
+
+      .el-icon-info {
+        color: @color-blue;
+      }
+    }
+
+    .am-purchase-code {
+      .el-icon-circle-check {
+        color: @color-blue;
+        right: 12px;
+        font-size: 16px;
+        top: 12px;
+        position: absolute;
+      }
+    }
+
+    .am-activate-plugin {
+      float: right;
+      width: 90%;
+      max-width: 90%;
+      padding-left: 0;
+      padding-right: 0;
+    }
+
+    .am-envato-activation-button {
+      background: rgb(130, 181, 65);
+      border: 1px solid rgb(130, 181, 65);
+      color: @color-white;
+      width: 100%;
+
+      &:hover {
+        background: #6D9837;
+        border: 1px solid #6D9837;
+      }
+
+      .am-envato-activation-logo {
+        width: 12px;
+        margin-bottom: -2px;
+        margin-right: 3px;
+      }
+    }
+  }
+}
