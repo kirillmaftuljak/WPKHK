@@ -1,0 +1,48 @@
+{
+    "translation-revision-date": "2019-07-11 08:15-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/blocks\/default-appointment.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nl",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Services": [
+                "Diensten"
+            ],
+            "Classes": [
+                "Classes"
+            ],
+            "Embed the service flow to capture new appointments.": [
+                "De service stroom insluiten om nieuwe afspraken vast te leggen."
+            ],
+            "Services booking flow": [
+                "Diensten boekingsstroom"
+            ],
+            "Edit Booking Form": [
+                "Wijzig reservering formulier."
+            ],
+            "Embed the classes flow to capture new attendees.": [
+                "De klassen stroom insluiten om nieuwe deelnemers vast te leggen."
+            ],
+            "Classes booking flow": [
+                "Klassen boeken flow"
+            ],
+            "Loading the booking application...": [
+                "Het laden van de boeking aanvraag..."
+            ],
+            "Upgrade to gain access to Start Booking class functionality.": [
+                "Upgrade om toegang te krijgen tot de boekingsklasse functionaliteit te starten."
+            ],
+            "Upgrade to gain access to class functionality.": [
+                "Upgrade om toegang te krijgen tot klasse functionaliteit."
+            ],
+            "Upgrade": [
+                "Upgrade"
+            ]
+        }
+    }
+}

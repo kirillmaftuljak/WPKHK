@@ -1,0 +1,294 @@
+{
+    "translation-revision-date": "2019-07-11 08:18-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/admin\/editor.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Services": [
+                "Dienstleistungen"
+            ],
+            "Continue": [
+                "Weiter"
+            ],
+            "First Name": [
+                "Vorname"
+            ],
+            "Last Name": [
+                "Nachname"
+            ],
+            "Select": [
+                "Ausw\u00e4hlen"
+            ],
+            "Selected": [
+                "Ausgew\u00e4hlt"
+            ],
+            "Back": [
+                "Zur\u00fcck"
+            ],
+            "Email": [
+                "E-Mail"
+            ],
+            "Duration": [
+                "Dauer"
+            ],
+            "Select a Service Type": [
+                "Ausw\u00e4hlen eines Diensttyps"
+            ],
+            "Appointment": [
+                "Termin"
+            ],
+            "Credit Card": [
+                "Kreditkarte"
+            ],
+            "Price": [
+                "Preis"
+            ],
+            "Details": [
+                "Details"
+            ],
+            "Hide Icon": [
+                "Icon ausblenden"
+            ],
+            "Select a Service": [
+                "Gew\u00fcnschte Therapieform"
+            ],
+            "Select a Provider": [
+                "Ausw\u00e4hlen eines Anbieters"
+            ],
+            "Select a Date & Time": [
+                "W\u00e4hlen Sie ein Datum & eine Uhrzeit"
+            ],
+            "Available times for": [
+                "Verf\u00fcgbare Zeiten f\u00fcr"
+            ],
+            "There are no available times for this date": [
+                "Es sind keine Zeiten f\u00fcr dieses Datum verf\u00fcgbar"
+            ],
+            "Searching Availability": [
+                "Durchsuchen der Verf\u00fcgbarkeit"
+            ],
+            "Complete Appointment": [
+                "Termin buchen"
+            ],
+            "jane@gmail.com": [
+                "jane@gmail.com"
+            ],
+            "Jane": [
+                "Jane"
+            ],
+            "Doe": [
+                "Mustermann"
+            ],
+            "Phone": [
+                "Telefon"
+            ],
+            "Card Number": [
+                "Kartennummer"
+            ],
+            "Expiration": [
+                "Ablauf"
+            ],
+            "CVV": [
+                "CVV"
+            ],
+            "Submit": [
+                "Senden"
+            ],
+            "Book and Pay Later": [
+                "Buchen und sp\u00e4ter bezahlen"
+            ],
+            "By Clicking \u201c<strong>Submit<\/strong>\u201d you agree to our <a href=\"#\">Terms of Service<\/a> and <a href=\"#\">Privacy Policy<\/a>.": [
+                "Durch Klicken auf \"<strong>Senden<\/strong>\" stimmen Sie unseren <a href=\"#\">Nutzungsbedingungen<\/a> und <a href=\"#\">der Datenschutzrichtlinie<\/a>zu."
+            ],
+            "Thank you for booking!": [
+                "Vielen Dank f\u00fcr die Buchung!"
+            ],
+            "We look forward to seeing you soon": [
+                "Wir freuen uns auf Ihren Besuch"
+            ],
+            "Return back": [
+                "Zur\u00fcck"
+            ],
+            "Saved": [
+                "Gespeichert"
+            ],
+            "A visual editor for your booking form": [
+                "Ein visueller Editor f\u00fcr Ihr Buchungsformular"
+            ],
+            "Customize each step of your booking flow below.": [
+                "Passen Sie unten jeden Schritt Ihres Buchungsflusses an."
+            ],
+            "Types": [
+                "Typen"
+            ],
+            "Providers": [
+                "Anbieter"
+            ],
+            "Success": [
+                "Erfolg"
+            ],
+            "General": [
+                "Allgemein"
+            ],
+            "Heading": [
+                "\u00dcberschrift"
+            ],
+            "Text": [
+                "Text"
+            ],
+            "Select a date and time": [
+                "W\u00e4hlen Sie ein Datum und eine Uhrzeit"
+            ],
+            "Hide": [
+                "Verstecken"
+            ],
+            "Available Times": [
+                "Verf\u00fcgbare Zeiten"
+            ],
+            "Searching": [
+                "Es wird gesucht ..."
+            ],
+            "No Availability": [
+                "Nicht Verf\u00fcgbar"
+            ],
+            "Calendar": [
+                "Kalender"
+            ],
+            "Current Day": [
+                "Aktueller Tag"
+            ],
+            "Selected Day": [
+                "Ausgew\u00e4hlter Tag"
+            ],
+            "Day Number": [
+                "Tagesnummer"
+            ],
+            "Background": [
+                "Hintergrund"
+            ],
+            "Label": [
+                "Beschriftung"
+            ],
+            "Placeholder": [
+                "Platzhalter"
+            ],
+            "Required": [
+                "Erforderlich"
+            ],
+            "Payments": [
+                "Zahlungen"
+            ],
+            "Enable": [
+                "Aktivieren"
+            ],
+            "Credit Card Icons": [
+                "Kreditkarten Icons"
+            ],
+            "To use payments, first connect your Stripe account with Start Booking.": [
+                "Um Zahlungen zu verwenden, verbinden Sie zuerst Ihr Stripe-Konto mit Start Booking."
+            ],
+            "Connect": [
+                "Verbinden"
+            ],
+            "Button": [
+                "Schaltfl\u00e4che"
+            ],
+            "Pay Later Text": [
+                "Sp\u00e4tere Texte bezahlen"
+            ],
+            "Legal": [
+                "Rechtliches"
+            ],
+            "Display legal links": [
+                "Anzeigen rechtlicher Links"
+            ],
+            "Legal Copy": [
+                "Legal Copy"
+            ],
+            "Total": [
+                "Gesamt"
+            ],
+            "Card Button": [
+                "Karten-Taste"
+            ],
+            "Text Color": [
+                "Textfarbe"
+            ],
+            "Background Color": [
+                "Hintergrundfarbe"
+            ],
+            "Card Button Selected": [
+                "Kartentaste ausgew\u00e4hlt"
+            ],
+            "Text & Border Color": [
+                "Text & Rahmenfarbe"
+            ],
+            "Navigation Continue Button": [
+                "Navigation Continue Button"
+            ],
+            "Navigation Back Button": [
+                "Navigation Back-Taste"
+            ],
+            "Navigation": [
+                "Navigation"
+            ],
+            "Contextual": [
+                "Kontextbezogene"
+            ],
+            "Floating": [
+                "Floating \/ Triften"
+            ],
+            "Service Types": [
+                "Dienstleistungs-Arten"
+            ],
+            "Skip Step": [
+                "Schritt \u00fcberspringen"
+            ],
+            "Skip straight to services if there is only one service type.": [
+                "\u00dcberspringen Sie direkt zu Diensten, wenn nur ein Diensttyp vorhanden ist."
+            ],
+            "Skip straight to services if there is less than five service types.": [
+                "\u00dcberspringen Sie direkt zu Diensten, wenn weniger als f\u00fcnf Diensttypen vorhanden sind."
+            ],
+            "Skip to the next step if there is only one service.": [
+                "Fahren Sie mit dem n\u00e4chsten Schritt fort, wenn nur ein Dienst vorhanden ist."
+            ],
+            "Description": [
+                "Beschreibung"
+            ],
+            "Select a service": [
+                "W\u00e4hle einen Service"
+            ],
+            "Color": [
+                "Farbe"
+            ],
+            "Confirmation": [
+                "Best\u00e4tigung"
+            ],
+            "Paragraph": [
+                "Absatz"
+            ],
+            "We look forward to seeing you soon.": [
+                "Wir freuen uns auf ein baldiges Wiedersehen."
+            ],
+            "Confetti": [
+                "konfetti"
+            ],
+            "Display Confetti": [
+                "Display Konfetti"
+            ],
+            "View": [
+                "Anzeigen"
+            ],
+            "URL": [
+                "URL"
+            ]
+        }
+    }
+}

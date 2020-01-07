@@ -1,0 +1,294 @@
+{
+    "translation-revision-date": "2019-07-11 08:15-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/admin\/editor.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nl",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Services": [
+                "Diensten"
+            ],
+            "Continue": [
+                "Doorgaan"
+            ],
+            "First Name": [
+                "Voornaam"
+            ],
+            "Last Name": [
+                "Achternaam"
+            ],
+            "Select": [
+                "Selecteer"
+            ],
+            "Selected": [
+                "Geselecteerd"
+            ],
+            "Back": [
+                "Terug"
+            ],
+            "Email": [
+                "E-mail"
+            ],
+            "Duration": [
+                "Duur"
+            ],
+            "Select a Service Type": [
+                "Selecteer een service type"
+            ],
+            "Appointment": [
+                "Afspraak"
+            ],
+            "Credit Card": [
+                "Creditcard"
+            ],
+            "Price": [
+                "Prijs"
+            ],
+            "Details": [
+                "Details"
+            ],
+            "Hide Icon": [
+                "Pictogram verbergen"
+            ],
+            "Select a Service": [
+                "Selecteer een dienst"
+            ],
+            "Select a Provider": [
+                "Selecteer een provider"
+            ],
+            "Select a Date & Time": [
+                "Selecteer een datum & tijd"
+            ],
+            "Available times for": [
+                "Beschikbare tijden voor"
+            ],
+            "There are no available times for this date": [
+                "Er zijn geen beschikbare tijden voor deze datum"
+            ],
+            "Searching Availability": [
+                "Beschikbaarheid zoeken"
+            ],
+            "Complete Appointment": [
+                "Volledige afspraak"
+            ],
+            "jane@gmail.com": [
+                "jane@gmail.com"
+            ],
+            "Jane": [
+                "Jane"
+            ],
+            "Doe": [
+                "Doe"
+            ],
+            "Phone": [
+                "Telefoon"
+            ],
+            "Card Number": [
+                "Kaartnummer"
+            ],
+            "Expiration": [
+                "Vervaldatum"
+            ],
+            "CVV": [
+                "CVV"
+            ],
+            "Submit": [
+                "Verzenden"
+            ],
+            "Book and Pay Later": [
+                "Boek en Betaal later"
+            ],
+            "By Clicking \u201c<strong>Submit<\/strong>\u201d you agree to our <a href=\"#\">Terms of Service<\/a> and <a href=\"#\">Privacy Policy<\/a>.": [
+                "Door te klikken op \"<strong>Submit<\/strong>\" gaat u akkoord met onze <a href=\"#\">Service voorwaarden<\/a> en <a href=\"#\">Privacy Policy<\/a>."
+            ],
+            "Thank you for booking!": [
+                "Dank u voor uw boeking!"
+            ],
+            "We look forward to seeing you soon": [
+                "We zien je graag weer terug bij St. Martinus."
+            ],
+            "Return back": [
+                "Terug"
+            ],
+            "Saved": [
+                "Opgeslagen"
+            ],
+            "A visual editor for your booking form": [
+                "Een visuele editor voor uw boekingsformulier"
+            ],
+            "Customize each step of your booking flow below.": [
+                "Pas elke stap van uw boekingsstroom hieronder."
+            ],
+            "Types": [
+                "Types"
+            ],
+            "Providers": [
+                "Aanbieders"
+            ],
+            "Success": [
+                "Succes"
+            ],
+            "General": [
+                "Algemeen"
+            ],
+            "Heading": [
+                "Kop"
+            ],
+            "Text": [
+                "Tekst"
+            ],
+            "Select a date and time": [
+                "Selecteer een datum en tijd"
+            ],
+            "Hide": [
+                "Verberg"
+            ],
+            "Available Times": [
+                "Beschikbare tijden"
+            ],
+            "Searching": [
+                "Zoeken"
+            ],
+            "No Availability": [
+                "Geen beschikbaarheid"
+            ],
+            "Calendar": [
+                "Kalender"
+            ],
+            "Current Day": [
+                "Huidige dag"
+            ],
+            "Selected Day": [
+                "Geselecteerde dag"
+            ],
+            "Day Number": [
+                "Dag nummer"
+            ],
+            "Background": [
+                "Achtergrond"
+            ],
+            "Label": [
+                "Label"
+            ],
+            "Placeholder": [
+                "Placeholder"
+            ],
+            "Required": [
+                "Verplicht"
+            ],
+            "Payments": [
+                "Betalingen"
+            ],
+            "Enable": [
+                "Inschakelen"
+            ],
+            "Credit Card Icons": [
+                "Credit Card iconen"
+            ],
+            "To use payments, first connect your Stripe account with Start Booking.": [
+                "Als u betalingen wilt gebruiken, sluit u eerst uw streep account aan bij Start Booking."
+            ],
+            "Connect": [
+                "Verbinden"
+            ],
+            "Button": [
+                "Knop"
+            ],
+            "Pay Later Text": [
+                "Betaal later tekst"
+            ],
+            "Legal": [
+                "Juridisch"
+            ],
+            "Display legal links": [
+                "Juridische koppelingen weergeven"
+            ],
+            "Legal Copy": [
+                "Legale kopie"
+            ],
+            "Total": [
+                "Totaal"
+            ],
+            "Card Button": [
+                "Kaart knop"
+            ],
+            "Text Color": [
+                "Tekstkleur"
+            ],
+            "Background Color": [
+                "Achtergrondkleur"
+            ],
+            "Card Button Selected": [
+                "Kaart knop geselecteerd"
+            ],
+            "Text & Border Color": [
+                "Tekst & randkleur"
+            ],
+            "Navigation Continue Button": [
+                "Knop navigatie doorgaan"
+            ],
+            "Navigation Back Button": [
+                "Navigatieknop terug"
+            ],
+            "Navigation": [
+                "Navigatie"
+            ],
+            "Contextual": [
+                "Contextuele"
+            ],
+            "Floating": [
+                "Drijvend"
+            ],
+            "Service Types": [
+                "Service typen"
+            ],
+            "Skip Step": [
+                "Stap overslaan"
+            ],
+            "Skip straight to services if there is only one service type.": [
+                "Ga rechtstreeks naar Services als er slechts \u00e9\u00e9n servicetype is."
+            ],
+            "Skip straight to services if there is less than five service types.": [
+                "Ga rechtstreeks naar Services als er minder dan vijf servicetypen zijn."
+            ],
+            "Skip to the next step if there is only one service.": [
+                "Ga naar de volgende stap als er maar \u00e9\u00e9n service is."
+            ],
+            "Description": [
+                "Omschrijving"
+            ],
+            "Select a service": [
+                "Selecteer een dienst"
+            ],
+            "Color": [
+                "Kleur"
+            ],
+            "Confirmation": [
+                "Bevestiging"
+            ],
+            "Paragraph": [
+                "Paragraaf"
+            ],
+            "We look forward to seeing you soon.": [
+                "We zien je graag weer terug bij St. Martinus."
+            ],
+            "Confetti": [
+                "Confetti"
+            ],
+            "Display Confetti": [
+                "Confetti weergeven"
+            ],
+            "View": [
+                "Bekijk"
+            ],
+            "URL": [
+                "URL"
+            ]
+        }
+    }
+}

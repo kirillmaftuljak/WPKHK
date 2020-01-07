@@ -1,0 +1,24 @@
+{
+    "translation-revision-date": "2019-07-11 08:17-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/blocks\/legacy-class.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "pt_BR",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "Classes": [
+                "Classes"
+            ],
+            "Embed the classes flow to capture new attendees.": [
+                "Incorpore o fluxo de classes para capturar novos participantes."
+            ],
+            "Embed for your Start Booking form.": [
+                "Incorpore para seu formul\u00e1rio da reserva do come\u00e7o."
+            ]
+        }
+    }
+}

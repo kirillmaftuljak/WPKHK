@@ -1,0 +1,24 @@
+{
+    "translation-revision-date": "2019-07-11 08:15-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/blocks\/legacy-class.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "nl",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Classes": [
+                "Classes"
+            ],
+            "Embed the classes flow to capture new attendees.": [
+                "De klassen stroom insluiten om nieuwe deelnemers vast te leggen."
+            ],
+            "Embed for your Start Booking form.": [
+                "Embed voor uw start boekingsformulier."
+            ]
+        }
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "translation-revision-date": "2019-07-11 08:15-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/admin\/services.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "fr",
+                "plural-forms": "nplurals=2; plural=(n > 1);"
+            },
+            "Continue": [
+                "Continuer"
+            ],
+            "First Name": [
+                "Pr\u00e9nom"
+            ],
+            "Last Name": [
+                "Nom"
+            ],
+            "Select": [
+                "S\u00e9lectionner"
+            ],
+            "Selected": [
+                "S\u00e9lectionn\u00e9"
+            ],
+            "Back": [
+                "Retour"
+            ],
+            "Email": [
+                "Email"
+            ],
+            "Select a Service Type": [
+                "S\u00e9lectionnez un type de service"
+            ],
+            "Select a Service": [
+                "Choisir un service"
+            ],
+            "Select a Provider": [
+                "S\u00e9lectionnez un fournisseur"
+            ],
+            "Select a Date & Time": [
+                "S\u00e9lectionnez une date et une heure"
+            ],
+            "Available times for": [
+                "Temps disponibles pour"
+            ],
+            "There are no available times for this date": [
+                "Il n'y a pas de temps disponible pour cette date"
+            ],
+            "Searching Availability": [
+                "Rechercher la disponibilit\u00e9"
+            ],
+            "Complete Appointment": [
+                "Nomination compl\u00e8te"
+            ],
+            "jane@gmail.com": [
+                "jane@gmail.com"
+            ],
+            "Jane": [
+                "Jane"
+            ],
+            "Doe": [
+                "Dupont"
+            ],
+            "Phone": [
+                "T\u00e9l\u00e9phone"
+            ],
+            "Card Number": [
+                "Num\u00e9ro de la carte"
+            ],
+            "Expiration": [
+                "Expiration"
+            ],
+            "CVV": [
+                "CVV"
+            ],
+            "Submit": [
+                "Envoyer"
+            ],
+            "Book and Pay Later": [
+                "R\u00e9servez et payez plus tard"
+            ],
+            "By Clicking \u201c<strong>Submit<\/strong>\u201d you agree to our <a href=\"#\">Terms of Service<\/a> and <a href=\"#\">Privacy Policy<\/a>.": [
+                "En cliquant sur \"<strong>Soumettre<\/strong>\" vous acceptez nos <a href=\"#\">conditions de service<\/a> et notre politique de <a href=\"#\">confidentialit\u00e9<\/a>."
+            ],
+            "Thank you for booking!": [
+                "Merci de votre r\u00e9servation!"
+            ],
+            "We look forward to seeing you soon": [
+                "Au plaisir de vous revoir prochainement sur notre site."
+            ],
+            "Return back": [
+                "Retour"
+            ],
+            "Saved": [
+                "Enregistr\u00e9"
+            ]
+        }
+    }
+}

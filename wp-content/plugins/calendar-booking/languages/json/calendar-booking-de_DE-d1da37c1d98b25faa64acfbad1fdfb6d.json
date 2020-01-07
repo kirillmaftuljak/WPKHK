@@ -1,0 +1,102 @@
+{
+    "translation-revision-date": "2019-07-11 08:18-0600",
+    "generator": "WP-CLI\/2.3.0-alpha-b0be5c1",
+    "source": "public\/js\/admin\/services.js",
+    "domain": "messages",
+    "locale_data": {
+        "messages": {
+            "": {
+                "domain": "messages",
+                "lang": "de",
+                "plural-forms": "nplurals=2; plural=(n != 1);"
+            },
+            "Continue": [
+                "Weiter"
+            ],
+            "First Name": [
+                "Vorname"
+            ],
+            "Last Name": [
+                "Nachname"
+            ],
+            "Select": [
+                "Ausw\u00e4hlen"
+            ],
+            "Selected": [
+                "Ausgew\u00e4hlt"
+            ],
+            "Back": [
+                "Zur\u00fcck"
+            ],
+            "Email": [
+                "E-Mail"
+            ],
+            "Select a Service Type": [
+                "Ausw\u00e4hlen eines Diensttyps"
+            ],
+            "Select a Service": [
+                "Gew\u00fcnschte Therapieform"
+            ],
+            "Select a Provider": [
+                "Ausw\u00e4hlen eines Anbieters"
+            ],
+            "Select a Date & Time": [
+                "W\u00e4hlen Sie ein Datum & eine Uhrzeit"
+            ],
+            "Available times for": [
+                "Verf\u00fcgbare Zeiten f\u00fcr"
+            ],
+            "There are no available times for this date": [
+                "Es sind keine Zeiten f\u00fcr dieses Datum verf\u00fcgbar"
+            ],
+            "Searching Availability": [
+                "Durchsuchen der Verf\u00fcgbarkeit"
+            ],
+            "Complete Appointment": [
+                "Termin buchen"
+            ],
+            "jane@gmail.com": [
+                "jane@gmail.com"
+            ],
+            "Jane": [
+                "Jane"
+            ],
+            "Doe": [
+                "Mustermann"
+            ],
+            "Phone": [
+                "Telefon"
+            ],
+            "Card Number": [
+                "Kartennummer"
+            ],
+            "Expiration": [
+                "Ablauf"
+            ],
+            "CVV": [
+                "CVV"
+            ],
+            "Submit": [
+                "Senden"
+            ],
+            "Book and Pay Later": [
+                "Buchen und sp\u00e4ter bezahlen"
+            ],
+            "By Clicking \u201c<strong>Submit<\/strong>\u201d you agree to our <a href=\"#\">Terms of Service<\/a> and <a href=\"#\">Privacy Policy<\/a>.": [
+                "Durch Klicken auf \"<strong>Senden<\/strong>\" stimmen Sie unseren <a href=\"#\">Nutzungsbedingungen<\/a> und <a href=\"#\">der Datenschutzrichtlinie<\/a>zu."
+            ],
+            "Thank you for booking!": [
+                "Vielen Dank f\u00fcr die Buchung!"
+            ],
+            "We look forward to seeing you soon": [
+                "Wir freuen uns auf Ihren Besuch"
+            ],
+            "Return back": [
+                "Zur\u00fcck"
+            ],
+            "Saved": [
+                "Gespeichert"
+            ]
+        }
+    }
+}
